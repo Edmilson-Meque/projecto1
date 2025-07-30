@@ -34,11 +34,13 @@ public class Dev {
         this.conteudosclocuidos = conteudosclocuidos;
     }
 
+
     public void inscreverBoot(Bootcamp bootcamp){
         this.conteudosinscritos.addAll(bootcamp.getConteudo());
         bootcamp.getDevsinscritos().add(this);
     }
-    public void progredir(){
+    //Para progredir ou concluir o conteudo
+    public void programed(){
         Optional<Conteudo> conteudo=this.conteudosinscritos.stream().findFirst();
         if(conteudo.isPresent()){
             this.conteudosclocuidos.add(conteudo.get());
