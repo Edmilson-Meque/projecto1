@@ -1,3 +1,4 @@
+import project.Domain.Conteudo;
 import project.Domain.Curso;
 import project.Domain.Mentoria;
 
@@ -20,15 +21,15 @@ public class Main {
         curso2.setDescricao("Mundial");
         curso2.setCargahoraria(64);
         System.out.println(curso2);
-        System.out.println("======================================================================");
-
 
         Mentoria mentoria=new Mentoria();
         mentoria.setDescricao("Horas");
         mentoria.setTitulo("Hoje");
-        mentoria.setCargahoraria(LocalDate.now());
+        mentoria.setDatalocal(LocalDate.now());
 
         System.out.println(mentoria);
+
+
 
     }
 }

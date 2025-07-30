@@ -2,44 +2,33 @@ package project.Domain;
 
 import java.time.LocalDate;
 
-public class Mentoria {
-   private String titulo;
-    private String descricao;
-   private LocalDate cargahoraria;
+public class Mentoria extends Conteudo {
+
+   private LocalDate datalocal;
 
     public Mentoria() {
     }
 
-    public String getTitulo() {
-        return titulo;
+
+    public LocalDate getDatalocal() {
+        return datalocal;
     }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
-
-    public LocalDate getCargahoraria() {
-        return cargahoraria;
-    }
-
-    public void setCargahoraria(LocalDate cargahoraria) {
-        this.cargahoraria = cargahoraria;
+    public void setDatalocal(LocalDate datalocal) {
+        this.datalocal = datalocal;
     }
 
     @Override
     public String toString() {
         return "Mentoria{" +
-                "titulo='" + titulo + '\'' +
-                ", descricao='" + descricao + '\'' +
-                ", cargahoraria=" + cargahoraria +
+                "titulo='" + getTitulo() + '\'' +
+                ", descricao='" + getDescricao()+ '\'' +
+                ", datalocal=" + datalocal +
                 '}';
+    }
+
+    @Override
+    public double calcularXP() {
+        return XP_Padrao+20;
     }
 }
